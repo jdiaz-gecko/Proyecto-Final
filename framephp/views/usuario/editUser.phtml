@@ -1,0 +1,74 @@
+
+<!--PAGE CONTENT -->
+<div id="content">
+
+	<div class="inner">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="page-header"><?php echo _('Catalogo de Usuarios')?></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<!-- _() es un alias del gettext() -->
+                           	<?php echo _('Editar  usuarios')?> 
+                        </div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-6">
+                                 <!--<form class="form-signin" action="<?php echo BASE_URL?>usuario/editUser" method="POST">-->
+                                <form role="form" method="POST" id="form_editusuario" enctype="multipart/form-data">
+                                	<input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+									<div class="form-group">
+										<label><?php echo _('Usuario')?></label> <input
+											class="form-control" placeholder="<?php echo $this->usuario->idusuario?>"
+											name="usuario" id="usuario" value="<?php echo $this->usuario->idusuario?>" readonly>
+									</div>
+									<div class="form-group">
+										<label><?php echo _('Nombre')?></label> <input
+											class="form-control" 
+											name="nombre" id="nombre" value="<?php echo $this->usuario->nombre?>">
+									</div>
+									<div class="form-group">
+										<label><?php echo _('Email')?></label> <input
+											class="form-control" placeholder="Ingrese Email" name="email"
+											id="email" value="<?php echo $this->usuario->email?>">
+									</div>
+								
+							
+									<div class="form-group">
+										<label><?php echo _('Rol')?></label> <select name="rol"
+											id="rol" class="form-control">
+											<option value="administrador" <?php echo $this->usuario->rol =='administrador'?'selected':'' ?>><?php echo _('Administrador')?></option>
+											<option value="supervisor" <?php echo $this->usuario->rol=='supervisor'?'selected':'' ?>><?php echo _('Supervisor')?></option>
+											<option value="usuario" <?php echo $this->usuario->rol =='usuario'?'selected':'' ?>><?php echo _('Usuario')?></option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label><?php echo _('Subir Foto')?></label> 
+										<input type="file" class="form-control" name="foto" id="foto">
+									</div>
+									
+									<button type="button" id="btn_edit"
+										class="btn btn-primary"><?php echo _('Actualizar')?></button>
+								
+									<!-- 									submit y reset estan programados -->
+									<!-- 									mientras que el button no -->
+
+									<div id="zona_respuesta"></div>
+								</form>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!--END PAGE CONTENT -->

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="UTF-8" />
+<title>Games Perú</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+<!-- GLOBAL STYLES -->
+<!-- PAGE LEVEL STYLES -->
+<link rel="stylesheet"
+	href="<?php echo BASE_URL?>public/assets/plugins/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="<?php echo BASE_URL?>public/assets/css/login.css" />
+<link rel="stylesheet"
+	href="<?php echo BASE_URL?>public/assets/plugins/magic/magic.css" />
+<!-- END PAGE LEVEL STYLES -->
+
+<!-- PAGE LEVEL SCRIPTS -->
+<script
+	src="<?php echo BASE_URL?>public/assets/plugins/jquery-2.0.3.min.js"></script>
+<script
+	src="<?php echo BASE_URL?>public/assets/plugins/bootstrap/js/bootstrap.js"></script>
+<script src="<?php echo BASE_URL?>public/assets/js/login.js"></script>
+<!--END PAGE LEVEL SCRIPTS -->
+
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+<body>
+
+	<!-- PAGE CONTENT -->
+	<div class="container">
+		<div class="text-center">
+			<img height="70px" src="<?php echo BASE_URL?>public/assets/images/games.jpg" alt=" Logo" />
+		</div>
+		<div class="tab-content">
+			<div id="login" class="tab-pane active">
+
+				<!--FORMULARIO -->
+				<form action="<?php echo BASE_URL?>index/login" method="POST"
+					class="form-signin">
+
+					<p
+						class="text-muted text-center">
+						<!--Marcamos ciertas palabras que podemos traducir -->
+                   <?php echo _('Ingrese usuario y contraseña')?>
+                </p>
+
+					<input type="text" placeholder="<?php echo _('USUARIO')?>"
+						name="usuario" id="usuario" class="form-control" /> 
+					<input type="password" placeholder="<?php echo _('PASSWORD')?>"
+						name="clave" id="clave" class="form-control" />
+					<button class="btn text-muted text-center btn-danger" type="submit"><?php echo _('Ingresar')?></button>
+
+				</form>
+				<!--FIN FORMULARIO -->
+
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+
+	<!--END PAGE CONTENT -->
+
+
+
+</body>
+<!-- END BODY -->
+</html>

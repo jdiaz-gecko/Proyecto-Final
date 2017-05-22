@@ -1,0 +1,97 @@
+
+<!-- ============================================================== -->
+<!-- Start right Content here -->
+<!-- ============================================================== -->
+<div class="content-page">
+    <!-- Start content -->
+    <div class="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <!-- _() es un alias del gettext() -->
+                            <?php echo _('Editar  Juego')?>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <!--<form class="form-signin" action="<?php echo BASE_URL?>usuario/editUser" method="POST">-->
+                                    <form role="form" method="POST" id="form_editJuego">
+
+                                        <div class="form-group">
+                                            <label><?php echo _('Id')?></label>
+                                            <input
+                                                    class="form-control" placeholder="<?php echo $this->juego->id?>"
+                                                    name="id" id="id" value="<?php echo $this->juego->id?>" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label><?php echo _('Nombre del Juego')?></label>
+                                            <input
+                                                    class="form-control" placeholder="<?php echo $this->juego->GameTitle?>"
+                                                    name="title" id="title" value="<?php echo $this->juego->GameTitle?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label><?php echo _('Num. Jugadores')?></label>
+                                            <input class="form-control" name="players" id="players"
+                                                   placeholder="<?php echo $this->juego->Players?>" value="<?php echo $this->juego->Players?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label><?php echo _('Distribuidora')?></label>
+                                            <input
+                                                    class="form-control" placeholder="<?php echo $this->juego->Developer?>" name="developer"
+                                                    id="developer" value="<?php echo $this->juego->Developer?>">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label><?php echo _('Genero')?></label>
+                                            <input
+                                                    class="form-control" placeholder="<?php echo $this->juego->Genre?>" name="genero"
+                                                    id="genero" value="<?php echo $this->juego->Genre?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label><?php echo _('Descripcion')?></label>
+                                            <input name="overview" id="overview"  class="form-control"
+                                                   placeholder="<?php echo $this->juego->Overview?>" value="<?php echo $this->juego->Overview?>">
+
+                                        </div>
+
+
+                                        <button type="button" id="btn_edit"
+                                                class="btn btn-primary"><?php echo _('Actualizar')?></button>
+
+                                        <div id="zona_respuesta"></div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+
+        </div> <!-- container -->
+
+    </div> <!-- content -->
+
+    <footer class="footer text-right">
+        2016 - 2017 © Adminto.
+    </footer>
+
+</div>
+
+
+<!-- ============================================================== -->
+<!-- End Right content here -->
+<!-- ============================================================== -->
+
+
+
+
+
+
+
